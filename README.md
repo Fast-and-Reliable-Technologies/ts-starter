@@ -27,3 +27,11 @@ cd $PROJECT_NAME
 rm -rf .git
 git init
 ```
+
+## Resources
+
+- <https://www.digitalocean.com/community/tutorials/typescript-new-project>
+- <https://www.npmjs.com/package/ts-node>
+- <https://www.npmjs.com/package/ts-node-dev>
+- <https://blog.logrocket.com/testing-typescript-apps-using-jest/>
+- <https://github.com/Fast-and-Reliable-Technologies/sheets-stack-core/blob/main/package.json>
