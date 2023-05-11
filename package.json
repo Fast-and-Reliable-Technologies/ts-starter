@@ -2,7 +2,7 @@
   "name": "ts-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/src/index.js",
   "scripts": {
     "dev": "ts-node-dev src/main.ts",
     "prebuild": "rimraf build",
