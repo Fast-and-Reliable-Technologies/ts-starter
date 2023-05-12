@@ -1,0 +1,53 @@
+image: node:18
+
+stages:
+  - test
+  - build
+  - publish
+  - docs
+
+test:
+  stage: test
+  before_script:
+    - npm clean-install
+  script:
+    - npm run lint
+    - npm run test
+  only:
+    - main
+
+build:
+  stage: build
+  before_script:
+    - npm clean-install
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - ./build
+  only:
+    - main
+
+publish:
+  stage: publish
+  before_script:
+    - npm clean-install
+  script:
+    - npm publish --access public
+  artifacts:
+    paths:
+      - ./build
+  only:
+    - main
+
+pages:
+  stage: docs
+  before_script:
+    - npm clean-install
+  script:
+    - npm run docs
+  artifacts:
+    paths:
+      - ./public
+  only:
+    - main

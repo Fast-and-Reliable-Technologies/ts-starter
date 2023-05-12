@@ -1,5 +1,22 @@
 # ts-starter
 
+## Usage
+
+### Libary Development
+
+Don't forget to bump the version when publishing!
+
+```sh
+npm install
+npm run dev
+npm run test
+
+# Optional
+npm link
+cd /path/to/application
+npm link @ampsec/platform-data
+```
+
 ## Generating Docs
 
 ```sh

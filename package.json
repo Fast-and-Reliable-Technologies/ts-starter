@@ -4,13 +4,14 @@
   "description": "",
   "main": "build/src/index.js",
   "scripts": {
-    "dev": "ts-node-dev src/main.ts",
+    "dev:library": "tsc --watch",
+    "dev:server": "ts-node-dev src/main.ts",
     "prebuild": "rimraf build",
     "build": "tsc",
-    "predocs": "rimraf docs",
-    "docs": "typedoc --out docs src/index.ts",
-    "docs:serve": "serve docs -p 3080",
-    "docs:deploy": "gh-pages -d docs",
+    "predocs": "rimraf public",
+    "docs": "typedoc --out public src/index.ts",
+    "docs:serve": "serve public -p 3080",
+    "docs:deploy:ghpages": "gh-pages -d docs",
     "lint": "gts lint",
     "clean": "gts clean",
     "fix": "gts fix",
@@ -19,7 +20,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@jest/types": "^29.5.0",
     "@types/cors": "^2.8.13",
@@ -45,5 +46,8 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "lodash": "^4.17.21"
-  }
+  },
+  "files": [
+    "/build/src"
+  ]
 }
