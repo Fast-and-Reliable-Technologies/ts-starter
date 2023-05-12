@@ -19,6 +19,10 @@ npm link @ampsec/platform-data
 
 ## Generating Docs
 
+The docs are generated in the `public` folder by default. This simplifies publishing to
+GitLab pages. That also means `public` is added to the `.gitignore` file. Change
+the `docs` scripts in `package.json` if you need it published to a different directory.
+
 ```sh
 npm run docs
 # preview before deploying
